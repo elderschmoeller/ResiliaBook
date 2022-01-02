@@ -1,9 +1,31 @@
-import React, { Component } from 'react';
-import api from './api.js';
-import Button from './botao.js'
+import React from 'react';
+//import api from './api.js';
+//import Button from './botao.js'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AddLivro } from './components/Livros/AddLivro.js';
+import { EditLivro } from './components/Livros/EditLivro.js';
+import { ListLivro } from './components/Livros/ListLivros.js';
 
-class App extends Component {
+function App() {
+  return (
+    <div>
+        <h1>Nav</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/AddLivro' element={<AddLivro />}/>
+          <Route path='/EditLivro' element={<EditLivro />}/>
+          <Route path='/ListaLivros' element={<ListLivro />}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+};
 
+export default App;
+
+/*
+
+{component}
   state = {
     func: [],
   }
@@ -12,15 +34,18 @@ class App extends Component {
     const response = await api.get('/clientes');
     this.setState({ func: response.data })
   }
+class App extends Component {
 
-  render() {
+//const { func } = this.state;
 
-    const { func } = this.state;
+*/
 
-    return (
-      <div>
-        <h1>
-          Busca funcionários
+
+/*  
+
+
+      <h1>
+          Livros
         </h1>
         <Button text="Aparecer" />
         <ul id='funcionarios' style={{listStyleType: 'none', margin: 0, padding: 0}}>
@@ -33,11 +58,5 @@ class App extends Component {
           </li>
           ))}
         </ul>
-      </div>
-    );
-  };
-};
-
-
-
-export default App;
+        
+*/ 
