@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AddLivro } from './components/Livros/AddLivro.js';
 import { EditLivro } from './components/Livros/EditLivro.js';
-import { ListLivro } from './components/Livros/ListLivros.js';
+import ListLivro from './components/Livros/ListLivros.js';
 
 function App() {
   return (
