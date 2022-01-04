@@ -23,13 +23,13 @@ class App extends Component {
           Busca funcionários
         </h1>
         <Button text="Aparecer" />
-        <ul id='funcionarios' style={{listStyleType: 'none', margin: 0, padding: 0}}>
-          {func.map(funcionario => (
-            <li id={`funcionario${+funcionario.id}`}>
-              <h2>Nome: {funcionario.nome_completo}</h2>
-              <h3>E-mail: {funcionario.email}</h3>
-              <h3>Endereço: {funcionario.endereco}</h3>
-              <h3>Idade: {funcionario.idade}</h3>
+        <ul id='clientes' style={{listStyleType: 'none', margin: 0, padding: 0}}>
+          {func.map(cliente => (
+            <li id={`cliente${+cliente.id}`}>
+              <h2>Nome: {cliente.nome_completo}</h2>
+              <h3>E-mail: {cliente.email}</h3>
+              <h3>Endereço: {cliente.endereco}</h3>
+              <h3>Idade: {cliente.idade}</h3>
           </li>
           ))}
         </ul>
