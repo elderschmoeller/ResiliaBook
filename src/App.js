@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <h1>
-          Busca funcionários
+          Busca clientes
         </h1>
         <Button text="Aparecer" />
         <ul id='clientes' style={{listStyleType: 'none', margin: 0, padding: 0}}>
