@@ -1,42 +1,41 @@
-import React, { Component } from 'react';
-import api from './api.js';
-import Button from './botao.js'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Clientes from './components/pages/Clientes';
+import Contatos from './components/pages/Contatos';
+import Livros from './components/pages/Livros';
+import NovosLivros from './components/pages/NovosLivros';
 
-class App extends Component {
+import Container from './components/layouts/Container';
+import NavBar from './components/layouts/NavBar';
+import Footer from './components/layouts/Footer';
 
-  state = {
-    func: [],
-  }
-
-  async componentDidMount() {
-    const response = await api.get('/clientes');
-    this.setState({ func: response.data })
-  }
-
-  render() {
-
-    const { func } = this.state;
-
-    return (
-      <div>
-        <h1>
-          Busca clientes
-        </h1>
-        <Button text="Aparecer" />
-        <ul id='clientes' style={{listStyleType: 'none', margin: 0, padding: 0}}>
-          {func.map(cliente => (
-            <li id={`cliente${+cliente.id}`}>
-              <h2>Nome: {cliente.nome_completo}</h2>
-              <h3>E-mail: {cliente.email}</h3>
-              <h3>Endereço: {cliente.endereco}</h3>
-              <h3>Idade: {cliente.idade}</h3>
-          </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
-};
+function App() {
+  return (
+    <Router>
+      <NavBar />
+    <Switch>
+      <Container customClass="min-height">
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/clientes">
+          <Clientes />
+        </Route>
+        <Route exact path="/livros">
+          <Livros />
+        </Route>
+        <Route exact path="/contatos">
+          <Contatos />
+        </Route>
+        <Route exact path="/novoslivros">
+          <NovosLivros />
+        </Route>
+      </Container>
+    </Switch>
+    <Footer />
+    </Router>
+  )
+}
 
 
 
