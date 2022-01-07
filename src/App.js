@@ -8,7 +8,7 @@ import NovosLivros from './components/pages/NovosLivros';
 import Container from './components/layouts/Container';
 import NavBar from './components/layouts/NavBar';
 import Footer from './components/layouts/Footer';
-import './index.css'
+import './index.css';
 
 function App() {
   return (
