@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import Input from '../Form/Input';
 import Select from '../Form/Select';
 import SubmitButton from '../Form/SubmitButton';
@@ -6,6 +7,17 @@ import SubmitButton from '../Form/SubmitButton';
 import styles from "./LivrosForm.module.css";
 
 function LivrosForm({btnText}) {
+  const [categories, setCategories] = useState([])
+
+  fetch("http://localhost:3005/categories", {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {setCategories(data)})
+    .catch((err) => console.log(err))
   return (
     <form className={styles.form}>
       <Input
@@ -28,7 +40,9 @@ function LivrosForm({btnText}) {
       />
       <Select 
       name="category_id" 
-      text="Selecione o Gênero do Livro:" />
+      text="Selecione o Gênero do Livro:" 
+      options={categories}
+      />
       <SubmitButton text={btnText} />
     </form>
   );
