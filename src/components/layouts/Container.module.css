@@ -4,18 +4,17 @@
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
-}
-
-.min-height {
-    max-height: 75px;
-    background-color: #5F5;
-}
-
-.start {
+  }
+  
+  .start {
     justify-content: flex-start;
-}
-
-.column {
+  }
+  
+  .column {
     flex-direction: column;
     justify-content: flex-start;
-}
+  }
+  
+  .min-height {
+    min-height: 75%;
+  }
