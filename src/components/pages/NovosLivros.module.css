@@ -1,0 +1,14 @@
+.novoslivros_container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 3em;
+}
+
+.novoslivros_container h1 {
+    margin-bottom: 5em;
+}
+
+.novoslivros_container p {
+    color: #5FF;
+}
+
