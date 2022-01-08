@@ -8,7 +8,6 @@ function Livros(){
     useEffect(() => {
         axios.get('http://localhost:3005/livros')
         .then((response) => {
-            console.log(response.data);
             setBooks(response.data);
         })
         .catch(() => {
