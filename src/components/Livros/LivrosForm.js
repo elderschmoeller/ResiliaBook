@@ -23,7 +23,8 @@ function LivrosForm({btnText}) {
 
   const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(validarLivro) });
 
-  const addLivro = data => axios.post('http://localhost:3005/livros', data).then(() => {
+  const addLivro = data => axios.post('http://localhost:3005/livros', data)
+  .then(() => {
     console.log('Seu livro foi adicionado com sucesso!!')
     history.push('/')
   }).catch(() => {
