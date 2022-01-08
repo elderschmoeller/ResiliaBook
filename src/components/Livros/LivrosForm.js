@@ -4,7 +4,8 @@ import Select from '../Form/Select';
 import SubmitButton from '../Form/SubmitButton';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import axios from 'axios'
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 import styles from "./LivrosForm.module.css";
@@ -16,17 +17,20 @@ const validarLivro = yup.object().shape({
   autor:yup.string().required('O campo autor é obrigatório'),
   genero:yup.string().required('O campo gênero é obrigatório'),
   editora:yup.string().required('O campo editora é obrigatório'),
-  preco:yup.number().required('O campo preço é obrigatório'),
+  preco:yup.number().typeError('O campo preço deve ser preenchido com um valor'),
 })
 
 function LivrosForm({btnText}) {
 
+  let history = useHistory()
+
   const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(validarLivro) });
 
   const addLivro = data => axios.post('http://localhost:3005/livros', data).then(() => {
-    console.log('FUNFOU!!')
+    console.log('Seu livro foi adicionado com sucesso!!')
+    history.push('/')
   }).catch(() => {
-    console.log('FUDEU!!')
+    console.log('Não foi possível inserir seu livro!!')
   });
 
   return(
