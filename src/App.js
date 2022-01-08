@@ -4,6 +4,7 @@ import Clientes from './components/pages/Clientes';
 import Contatos from './components/pages/Contatos';
 import Livros from './components/pages/Livros';
 import NovosLivros from './components/pages/NovosLivros';
+import EditarLivro from './components/Livros/EditarLivro';
 
 import Container from './components/layouts/Container';
 import NavBar from './components/layouts/NavBar';
@@ -31,13 +32,15 @@ function App() {
         <Route exact path="/novoslivros">
           <NovosLivros />
         </Route>
+        <Route exact path="/editarlivro">
+          <EditarLivro />
+        </Route>
       </Container>
     </Switch>
     <Footer />
     </Router>
   )
 }
-
 
 
 export default App;

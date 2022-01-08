@@ -5,8 +5,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-
-import styles from "./LivrosForm.module.css";
+import styles from "./LivrosForm.js";
 
 import { useForm } from 'react-hook-form'
 
@@ -18,7 +17,7 @@ const validarLivro = yup.object().shape({
   preco:yup.number().typeError('O campo preço deve ser preenchido com um valor'),
 })
 
-function LivrosForm({btnText}) {
+function EditarLivro({btnText}) {
 
   let history = useHistory()
 
@@ -69,4 +68,4 @@ function LivrosForm({btnText}) {
   )
 }
 
-export default LivrosForm;
+export default EditarLivro;
