@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SubmitButton from '../Form/SubmitButton';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import styles from "./LivrosForm.js";
 
@@ -17,13 +17,25 @@ const validarLivro = yup.object().shape({
   preco:yup.number().typeError('O campo preço deve ser preenchido com um valor'),
 })
 
-function EditarLivro({btnText}) {
+function EditarLivro() {
+
+  const { id } = useParams()
 
   let history = useHistory()
 
-  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(validarLivro) });
+  useEffect(() => {
+    axios.get(`http://localhost:3005/livros/${id}`)
+      .then((response) => {
+        reset(response.data);
+      })
+      .catch(() => {
+        console.log('A requisição deu errado!');
+      })
+  }, [])
 
-  const addLivro = data => axios.post('http://localhost:3005/livros', data).then(() => {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({ resolver: yupResolver(validarLivro) });
+
+  const addLivro = data => axios.put(`http://localhost:3005/livros/${id}`, data).then(() => {
     console.log('Seu livro foi adicionado com sucesso!!')
     history.push('/')
   }).catch(() => {
@@ -60,7 +72,7 @@ function EditarLivro({btnText}) {
                 <input type='text' name='preco' {...register('preco')}/>
                 <p>{errors.preco?.message}</p>
               </div>
-              <SubmitButton text={btnText} />
+              <SubmitButton text='Editar' />
             </form>
           </div>
       </main>
