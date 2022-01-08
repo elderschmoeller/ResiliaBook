@@ -16,6 +16,17 @@ function Livros() {
       })
   }, [])
 
+  function deletarlivro(id) {
+    axios.delete(`http://localhost:3005/livros/${id}`)
+    .then(() => {
+      console.log('Livro apagado com sucesso.')
+      setBooks(books.filter(livro => livro.id !== id))
+    })
+    .catch(() => {
+      console.log('Não foi possível apagar o registro.');
+    })
+  }
+
   return (
     books.map(livro => (
       <li id={`livro${+livro.id}`}>
@@ -30,6 +41,11 @@ function Livros() {
               Editar
             </button>
           </Link>
+        </div>
+        <div>
+          <button onClick={() => deletarlivro(livro.id)} >
+            Apagar livro
+          </button>
         </div>
         <br></br>
       </li>
