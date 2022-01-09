@@ -13,24 +13,19 @@ function NavBar() {
           <img className={styles.imgLogo} src={logo} alt="ResiliaBook" />
         </Link>
         <ul className={styles.list}>
-          <li className={styles.item
-          }>
+          <li className={styles.item}>
             <Link to="/">Home</Link>
           </li>
-          <li className={styles.item
-          }>
+          <li className={styles.item}>
             <Link to="/clientes">Clientes</Link>
           </li>
-          <li className={styles.item
-          }>
+          <li className={styles.item}>
             <Link to="/contatos">Contatos</Link>
           </li>
-          <li className={styles.item
-          }>
+          <li className={styles.item}>
             <Link to="/livros">Livros</Link>
           </li>
-          <li className={styles.item
-          }>
+          <li className={styles.item}>
             <Link to="/novosLivros">Novos Livros</Link>
           </li>
         </ul>

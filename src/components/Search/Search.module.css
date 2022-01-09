@@ -1,0 +1,11 @@
+
+.f2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text_bar {
+    width: 600px;
+    position: relative; left: 50%; margin-left: -300px;
+}
