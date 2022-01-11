@@ -7,17 +7,14 @@ function Footer() {
     <footer className={styles.footer}>
       <ul className={styles.social_list}>
         <li>
-          <FaInstagram />
+          <a href="/contatos"><FaLinkedin /></a>
         </li>
         <li>
-          <FaLinkedin />
-        </li>
-        <li>
-          <FaGithub />
+          <a href="/contatos"><FaGithub /></a>
         </li>
       </ul>
       <p className={styles.copy_right}>
-        <span>Resilia Book</span> &copy; 2021 
+        <a href="/sobre"><span>Resilia Book</span></a> &copy; 2021 
       </p>
     </footer>
   );
