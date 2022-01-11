@@ -97,13 +97,12 @@ textarea {
   padding-top: 10px;
 }
 
-.btn-post{
-    margin-top: 30px;
-    text-align: center;
-
+.btn-post {
+  margin-top: 30px;
+  text-align: center;
 }
 
-.btn-post button{
+.btn-post button {
   font-family: Heebo;
   font-weight: 800;
   font-size: 1.3rem;

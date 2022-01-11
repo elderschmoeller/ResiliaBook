@@ -1,35 +1,42 @@
-
 .footer {
-    background-color: #002244;
-    color: #fff;
-    padding: 3em;
-    text-align: center;
-  }
-  
-  .social_list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-  }
-  
-  .social_list li {
-    margin: 0 1em;
-  }
-  
-  .social_list li:hover {
-    color: #ba6;
-  }
-  
-  .social_list svg {
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
-  .copy_right {
-    margin-top: 2em;
-  }
-  
-  .copy_right span {
-    font-weight: bold;
-    color: #ba6;
-  }
+  background-color: #002244;
+  color: #fff;
+  padding: 3em;
+  text-align: center;
+}
+
+.social_list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.social_list li {
+  margin: 0 1em;
+}
+.social_list li a {
+  margin: 0 1em;
+  color: #eee;
+}
+
+.social_list li a:hover {
+  color: #ba6;
+}
+
+.social_list li:hover {
+  color: #ba6;
+}
+
+.social_list svg {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.copy_right {
+  margin-top: 2em;
+}
+
+.copy_right span {
+  font-weight: bold;
+  color: #ba6;
+}

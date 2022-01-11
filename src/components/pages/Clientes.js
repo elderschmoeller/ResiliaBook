@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import styles from './Clientes.module.css'
+import styles from "./Clientes.module.css";
 
 function Clientes() {
   const [clients, setClients] = useState([]);
@@ -40,15 +40,22 @@ function Clientes() {
         <h3>Telefone: {cliente.telefone}</h3>
         <h3>Genero_preferido: {cliente.genero_preferido}</h3>
       </li>
-        <div>
-          <Link to={{ pathname: `/editarcliente/${cliente.id}` }}>
-            <button className={styles.btn_clientes} type="button">Editar</button>
-          </Link>
-        </div>
-        <div>
-          <button className={styles.btn_clientes} onClick={() => deletarcliente(cliente.id)}>Apagar cliente</button>
-        </div>
-        <br></br>
+      <div>
+        <Link to={{ pathname: `/editarcliente/${cliente.id}` }}>
+          <button className={styles.btn_clientes} type="button">
+            Editar
+          </button>
+        </Link>
+      </div>
+      <div>
+        <button
+          className={styles.btn_clientes}
+          onClick={() => deletarcliente(cliente.id)}
+        >
+          Apagar cliente
+        </button>
+      </div>
+      <br></br>
     </form>
   ));
 }
