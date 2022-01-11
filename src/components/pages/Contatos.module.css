@@ -1,7 +1,7 @@
-.clientes {
+.contatos_form {
+    color: #eee;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 
     letter-spacing: 0.1em;
@@ -17,24 +17,6 @@
     background-color: #002244;
 }
 
-.btn_clientes {
-    background-color: #4F4F4F;
-    color: #eee;
-    padding: 0.7em 1.2em;
-    text-decoration: none;
-    transition: 0.5s;
-    border-radius: .5em;
-    cursor: pointer;
-    border: none;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    font-weight: bold;
-}
-
-.btn_clientes:hover {
-    color: #5FF;
-}
-
-h2, h3 {
+.contatos_form a {
     color: #ba6;
 }

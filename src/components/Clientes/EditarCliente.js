@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
 
-import styles from "./ClientesForm.js";
+import styles from "./EditarCliente.module.css";
 
 import { useForm } from 'react-hook-form'
 

@@ -21,11 +21,12 @@
 }
 
 .item a:hover {
-  color: #5ff;
+  color: #ba6;
   text-decoration: none;
 }
 
 .imgLogo {
   width: 10em;
   height: 10em;
+  border-radius: 50%;
 }

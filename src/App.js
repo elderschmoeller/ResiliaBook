@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
+import Sobre from "./components/pages/Sobre";
 import Clientes from "./components/pages/Clientes";
-import NovosClientes from "./components/pages/NovosClientes";
-import EditarCliente from "./components/Clientes/EditarCliente";
 import Contatos from "./components/pages/Contatos";
 import Livros from "./components/pages/Livros";
 import NovosLivros from "./components/pages/NovosLivros";
+
+import NovosClientes from "./components/pages/NovosClientes";
+import EditarCliente from "./components/Clientes/EditarCliente";
 import EditarLivro from "./components/Livros/EditarLivro";
 
 import Container from "./components/layouts/Container";
@@ -22,24 +24,35 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+
+          <Route exact path="/sobre">
+            <Sobre />
+          </Route>
+
           <Route exact path="/clientes">
             <Clientes />
           </Route>
+
           <Route exact path="/livros">
             <Livros />
           </Route>
+
           <Route exact path="/contatos">
             <Contatos />
           </Route>
+
           <Route exact path="/novoslivros">
             <NovosLivros />
           </Route>
+
           <Route exact path="/editarlivro/:id">
             <EditarLivro />
           </Route>
+
           <Route exact path="/novosclientes">
             <NovosClientes />
           </Route>
+
           <Route exact path="/editarcliente/:id">
             <EditarCliente />
           </Route>

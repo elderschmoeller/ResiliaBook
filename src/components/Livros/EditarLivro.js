@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom';
 
-import styles from "./LivrosForm.js";
+import styles from "./EditarLivro.module.css";
 
 import { useForm } from 'react-hook-form'
 
@@ -48,6 +48,7 @@ function EditarLivro() {
           <div> 
             <form className={styles.form} onSubmit={handleSubmit(addLivro)} > 
               <div>
+                <h3>Edite suas informações abaixo ↓</h3>
                 <label>Título</label>
                 <input type='text' name='titulo' {...register('titulo')}/>
                 <p>{errors.titulo?.message}</p>

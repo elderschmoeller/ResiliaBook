@@ -13,16 +13,19 @@
   }
   
   .home_container h1 span {
-    color: #5FF;
+    color: #ba6;
     padding: 0 0.2em;
     background-color: #222;
   }
   
   .home_container p {
     margin-bottom: 1.5em;
+    font-weight: bold;
+    color: #002244;
   }
   
   .home_container img {
     width: 350px;
     margin: 2em 0;
+    border-radius: 50%;
   }

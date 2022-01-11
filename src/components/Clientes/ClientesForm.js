@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-import styles from "./ClientesForm.module.css";
+import "./ClientesForm.module.css";
 
 import { useForm } from 'react-hook-form'
 
@@ -38,39 +38,39 @@ function ClientesForm({btnText}) {
     <div>
       <main>
           <div> 
-            <form className={styles.form} onSubmit={handleSubmit(addCliente)} > 
+            <form className="form" onSubmit={handleSubmit(addCliente)} > 
               <div>
-                <label>Nome_completo</label>
+                <label className="label_clientes">Nome_completo</label>
                 <input type='text' name='nome_completo' {...register('nome_completo')}/>
                 <p>{errors.nome_completo?.message}</p>
               </div>
               <div>
-                <label>Email</label>
+                <label className="label_clientes">Email</label>
                 <input type='text' name='email' {...register('email')}/>
                 <p>{errors.email?.message}</p>
               </div>
               <div>
-                <label>Idade</label>
+                <label className="label_clientes">Idade</label>
                 <input type='text' name='idade' {...register('idade')}/>
                 <p>{errors.idade?.message}</p>
               </div>
               <div>
-                <label>CPF</label>
+                <label className="label_clientes">CPF</label>
                 <input type='text' name='cpf' {...register('cpf')}/>
                 <p>{errors.cpf?.message}</p>
               </div>
               <div>
-                <label>Endereço</label>
+                <label className="label_clientes">Endereço</label>
                 <input type='text' name='endereço' {...register('endereço')}/>
                 <p>{errors.endereço?.message}</p>
               </div>
               <div>
-                <label>Telefone</label>
+                <label className="label_clientes">Telefone</label>
                 <input type='text' name='telefone' {...register('telefone')}/>
                 <p>{errors.telefone?.message}</p>
               </div>
               <div>
-                <label>Genero_preferido</label>
+                <label className="label_clientes">Genero_preferido</label>
                 <input type='text' name='genero_preferido' {...register('genero_preferido')}/>
                 <p>{errors.genero_preferido?.message}</p>
               </div>

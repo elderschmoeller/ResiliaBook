@@ -30,7 +30,7 @@ function Clientes() {
   }
 
   return clients.map((cliente) => (
-    <form>
+    <form className={styles.clientes}>
       <li id={`cliente${+cliente.id}`}>
         <h2>Nome_completo: {cliente.nome_completo}</h2>
         <h3>Email: {cliente.email}</h3>
@@ -42,11 +42,11 @@ function Clientes() {
       </li>
         <div>
           <Link to={{ pathname: `/editarcliente/${cliente.id}` }}>
-            <button type="button">Editar</button>
+            <button className={styles.btn_clientes} type="button">Editar</button>
           </Link>
         </div>
         <div>
-          <button onClick={() => deletarcliente(cliente.id)}>Apagar cliente</button>
+          <button className={styles.btn_clientes} onClick={() => deletarcliente(cliente.id)}>Apagar cliente</button>
         </div>
         <br></br>
     </form>

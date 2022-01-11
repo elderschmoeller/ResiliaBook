@@ -30,7 +30,7 @@ function Livros() {
   }
 
   return books.map((livro) => (
-    <form>
+    <form className={styles.form_livros}>
       <li id={`livro${+livro.id}`}>
         <h2>Titulo: {livro.titulo}</h2>
         <h3>Autor: {livro.autor}</h3>
@@ -40,11 +40,11 @@ function Livros() {
       </li>
         <div>
           <Link to={{ pathname: `/editarlivro/${livro.id}` }}>
-            <button type="button">Editar</button>
+            <button className={styles.btn_livros} type="button">Editar</button>
           </Link>
         </div>
         <div>
-          <button onClick={() => deletarlivro(livro.id)}>Apagar livro</button>
+          <button className={styles.btn_livros} onClick={() => deletarlivro(livro.id)}>Apagar livro</button>
         </div>
         <br></br>
     </form>
