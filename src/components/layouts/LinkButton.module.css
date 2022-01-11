@@ -6,6 +6,7 @@
   transition: 0.5s;
   border-radius: 0.5em;
   font-weight: bold;
+  width: fit-content;
 }
 
 .btn:hover {

@@ -1,14 +1,15 @@
 .home_container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto;
     align-items: center;
-    justify-content: center;
     padding: 4em;
+    margin: 0 auto;
   }
   
   .home_container h1 {
     font-size: 2.5em;
+    margin: 0 auto;
     margin-bottom: 0.5em;
   }
   
@@ -19,13 +20,21 @@
   }
   
   .home_container p {
-    margin-bottom: 1.5em;
     font-weight: bold;
     color: #002244;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
   }
   
   .home_container img {
     width: 350px;
     margin: 2em 0;
     border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  a {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
   }
