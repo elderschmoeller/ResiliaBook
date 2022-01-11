@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Clientes from "./components/pages/Clientes";
+import NovosClientes from "./components/pages/NovosClientes";
+import EditarCliente from "./components/Clientes/EditarCliente";
 import Contatos from "./components/pages/Contatos";
 import Livros from "./components/pages/Livros";
 import NovosLivros from "./components/pages/NovosLivros";
 import EditarLivro from "./components/Livros/EditarLivro";
-
-import Search from "./components/Search/Search";
-import initialDetails from "./data/InitialDetails";
 
 import Container from "./components/layouts/Container";
 import NavBar from "./components/layouts/NavBar";
@@ -18,9 +17,6 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div className="tc bg-green ma0 pa4 min-vh-100">
-        <Search details={initialDetails} />
-      </div>
       <Switch>
         <Container customClass="min-height">
           <Route exact path="/">
@@ -40,6 +36,12 @@ function App() {
           </Route>
           <Route exact path="/editarlivro/:id">
             <EditarLivro />
+          </Route>
+          <Route exact path="/novosclientes">
+            <NovosClientes />
+          </Route>
+          <Route exact path="/editarcliente/:id">
+            <EditarCliente />
           </Route>
         </Container>
       </Switch>

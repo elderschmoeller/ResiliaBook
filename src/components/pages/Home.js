@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './Home.module.css'
 import savings from '../../img/Resilia book.svg'
 import LinkButton from '../layouts/LinkButton'
-import axios from 'axios';
+import axios from 'axios'
+
 
 
 function Home() {

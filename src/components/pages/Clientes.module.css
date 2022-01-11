@@ -1,0 +1,9 @@
+.clientes {
+    width: 200%;
+    padding: 12px 20px;
+    margin: 60px 0 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
