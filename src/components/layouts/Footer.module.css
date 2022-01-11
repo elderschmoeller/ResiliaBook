@@ -14,12 +14,12 @@
 .social_list li {
   margin: 0 1em;
 }
-.social_list li a{
+.social_list li a {
   margin: 0 1em;
   color: #eee;
 }
 
-.social_list li a:hover{
+.social_list li a:hover {
   color: #ba6;
 }
 
