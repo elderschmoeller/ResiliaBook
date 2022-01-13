@@ -4,6 +4,7 @@ import Container from "./Container";
 
 import styles from "../layouts/NavBar.module.css";
 import logo from "../../img/Resilia book.svg";
+import Loading from "../Loading/Loading"
 
 function NavBar() {
   return (

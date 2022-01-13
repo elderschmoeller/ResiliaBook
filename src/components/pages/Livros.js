@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./Livros.module.css";
 
+
+
 function Livros() {
   const [books, setBooks] = useState([]);
 
@@ -28,7 +30,8 @@ function Livros() {
         console.log("Não foi possível apagar o registro.");
       });
   }
-
+  
+  
   return books.map((livro) => (
     <form className={styles.form_livros}>
       <li id={`livro${+livro.id}`}>
@@ -59,3 +62,5 @@ function Livros() {
 }
 
 export default Livros;
+
+
